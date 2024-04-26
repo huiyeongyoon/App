@@ -1,9 +1,9 @@
 {
-  "name": "app",
+  "name": "vue3-quasar-app",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
-  "author": "huiyeong",
+  "description": "Vue3 Quasar Firebase TypeScript Lecture",
+  "productName": "Vue3 Quasar App",
+  "author": "huiyeong>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
@@ -27,7 +27,7 @@
     "eslint-plugin-vue": "^9.14.1",
     "postcss": "^8.4.14",
     "prettier": "^2.8.8",
-    "unplugin-vue-router": "^0.8.6",
+    "unplugin-vue-router": "^0.6.4",
     "vite-plugin-vue-layouts": "^0.8.0"
   },
   "engines": {
