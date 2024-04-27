@@ -1,14 +1,9 @@
 <template>
-  <q-layout view="hHh lpR fFf" class="bg-grey-2">
+  <q-layout view="hHh lpR fFf" class="bg-grey-3">
     <q-header bordered class="bg-white text-grey-9">
       <q-toolbar>
         <q-btn flat dense to="/">
-          <q-toolbar-title>
-            <q-avatar>
-              <img src="/assets/logo.jpg" />
-            </q-avatar>
-            포트폴리오
-          </q-toolbar-title>
+          <q-toolbar-title> 커뮤니티 </q-toolbar-title>
         </q-btn>
         <q-space />
         <q-btn stretch flat label="Home" to="/home" />
