@@ -23,7 +23,7 @@
 </template>
 
 <script setup>
-import baseCard from "src/components/base/basecard.vue";
+import baseCard from "src/components/base/baseCard.vue";
 import commentList from "src/components/apps/comment/commentList.vue";
 import { ref } from "vue";
 const isActive = ref(false);

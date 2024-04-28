@@ -46,7 +46,7 @@ const pageContainerStyles = computed(() => {
   };
 });
 
-const authDialog = ref(true);
+const authDialog = ref(false);
 
 const openAuthDialog = () => {
   authDialog.value = true;

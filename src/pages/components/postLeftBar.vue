@@ -19,22 +19,8 @@
 </template>
 
 <script setup>
+import baseCard from "src/components/base/baseCard.vue";
 import stickySideBarVue from "./stickySideBar.vue";
-import baseCard from "src/components/base/basecard.vue";
-const categories = [
-  {
-    label: "Q&A",
-    value: "qna",
-  },
-  {
-    label: "커뮤니티",
-    value: "community",
-  },
-  {
-    label: "공지사항",
-    value: "notice",
-  },
-];
+import { getCategories } from "src/services/category";
+const categories = getCategories();
 </script>
-
-<style lang="scss" scoped></style>

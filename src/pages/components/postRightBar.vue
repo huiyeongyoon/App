@@ -6,11 +6,12 @@
       color="primary"
       text-color="white"
       class="full-width"
+      @click="$emit('openWriteDialog')"
     >
       <q-avatar class="q-mr-sm" color="white" text-color="primary" size="22px">
         <q-icon name="edit" size="14px"></q-icon>
       </q-avatar>
-      <span class="text-weight-bold">새 포스트 작성하기</span>
+      <span class="text-weight-bold">새 포스트 </span>
     </q-btn>
     <baseCard class="q-mt-md bg-grey-1">
       <q-card-section class="flex items-center q-pb-none">
@@ -68,7 +69,10 @@
 
 <script setup>
 import stickySideBarVue from "./stickySideBar.vue";
-import baseCard from "src/components/base/basecard.vue";
+import baseCard from "src/components/base/baseCard.vue";
+
+defineEmits(["openWriteDialog"]);
+
 const tags = [
   {
     name: "vuejs",
