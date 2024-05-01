@@ -3,6 +3,7 @@
     <q-header bordered class="bg-white text-grey-9">
       <q-toolbar>
         <q-btn flat dense to="/">
+          {{ authStore }}
           <q-toolbar-title> 커뮤니티 </q-toolbar-title>
         </q-btn>
         <q-space />
@@ -22,6 +23,21 @@
           label="로그인 / 회원가입"
           @click="openAuthDialog"
         ></q-btn>
+        <q-btn round flat>
+          <q-avatar>
+            <img src="https://cdn.quasar.dev/img/avatar.png" />
+          </q-avatar>
+          <q-menu>
+            <q-list style="min-width: 100px">
+              <q-item clickable v-close-popup to="/mypage/profile">
+                <q-item-section>프로필</q-item-section>
+              </q-item>
+              <q-item clickable v-close-popup>
+                <q-item-section>로그아웃</q-item-section>
+              </q-item>
+            </q-list>
+          </q-menu>
+        </q-btn>
       </q-toolbar>
     </q-header>
 
@@ -35,10 +51,14 @@
 <script setup>
 import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
-
+import { useAuthStore } from "src/stores/auth";
 import AuthDialog from "src/components/auth/authDialog.vue";
+
 const route = useRoute();
 
+const authStore = useAuthStore;
+
+console.log(authStore);
 const pageContainerStyles = computed(() => {
   return {
     maxWidth: route.meta?.width || "1080px",

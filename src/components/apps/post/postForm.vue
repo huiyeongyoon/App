@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { ref, computed, defineProps, defineEmits } from "vue";
+import { ref, computed } from "vue";
 import { getCategories } from "src/services/category";
 
 const props = defineProps({
@@ -80,8 +80,6 @@ const contentModel = computed({
 });
 // tagField, removeTag, categories 정의
 const tagField = ref("");
-const removeTag = () => {
-  console.log("removeTag");
-};
+const removeTag = () => {};
 const categories = getCategories();
 </script>
